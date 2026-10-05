@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ganadería El Ancla | Zuera · Zaragoza</title>
+
+<meta name="description" content="Ganadería El Ancla. Ganadería de reses bravas situada en la Finca San Antonio, Zuera, Zaragoza.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+    --verde:#10291f;
+    --verde2:#1c4535;
+    --rojo:#8b2025;
+    --rojo2:#641519;
+    --crema:#f4efe4;
+    --beige:#ded4c0;
+    --blanco:#ffffff;
+    --gris:#77736c;
+    --negro:#111111;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--crema);
+    color:var(--negro);
+    line-height:1.7;
+}
+
+h1,h2,h3,h4{
+    font-family:'Cormorant Garamond',serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 5%;
+    transition:.4s;
+}
+
+header.scrolled{
+    background:rgba(16,41,31,.97);
+    padding:12px 5%;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.nav{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+}
+
+.logo-icon{
+    width:45px;
+    height:45px;
+    border:2px solid #d9c69c;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:rotate(45deg);
+}
+
+.logo-icon span{
+    transform:rotate(-45deg);
+    font-size:22px;
+}
+
+.logo-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d9c69c;
+}
+
+.menu-btn{
+    display:none;
+    background:none;
+    border:0;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.70)
+    ),
+    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVWDbx4si_dGhe-wOB6Rmu4nfwBnw5Uzv8_J9WWOp1fMCHOCXKgL0EnYiHDQFEH2MyO6iAqDwvBOCIArMRMSZCrmbbqsRvrCxRe05WaU2lYItxQ8yiq4JVq6AQHtdMAj809NHgk78eTFQ/s320-rw/DSC_3780.JPG")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:950px;
+    padding:30px;
+    animation:entrada 1.2s ease;
+}
+
+.hero-subtitle{
+    color:#d9c69c;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(80px,13vw,160px);
+    line-height:.8;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    font-weight:300;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 30px;
+    border:1px solid white;
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:11px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:var(--verde);
+}
+
+.btn-primary{
+    background:var(--rojo);
+    border-color:var(--rojo);
+}
+
+.btn-primary:hover{
+    background:var(--rojo2);
+    color:white;
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.scroll:after{
+    content:"↓";
+    display:block;
+    font-size:20px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+section{
+    padding:110px 6%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    margin-bottom:55px;
+}
+
+.section-label{
+    display:block;
+    color:var(--rojo);
+    font-size:11px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-size:clamp(48px,6vw,78px);
+    line-height:.95;
+    color:var(--verde);
+}
+
+.section-title p{
+    max-width:700px;
+    margin-top:20px;
+    color:var(--gris);
+}
+
+
+/* =========================
+   DATOS
+========================= */
+
+.datos{
+    background:var(--verde);
+    color:white;
+    padding:45px 6%;
+}
+
+.datos-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.dato{
+    text-align:center;
+    border-right:1px solid rgba(255,255,255,.15);
+}
+
+.dato:last-child{
+    border-right:0;
+}
+
+.dato strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    color:#d9c69c;
+}
+
+.dato span{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+
+/* =========================
+   HISTORIA
+========================= */
+
+.historia-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.historia-img{
+    height:620px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.20)
+    ),
+    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDCcnV8d_DM-mO91eScEue7bzonOyuG3vUviWAScbznDqoLppt82IQVRNWFvhFuLv8w7gAyI-mGDURlWSCuJmMTd4duVItLsY0h2N5KoRAAGoZa24jRMS7G45enASKZGHQdnkR5l9SXeE/s320-rw/DSC_3790.jpg")
+    center/cover no-repeat;
+}
+
+.historia-text p{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.cita{
+    border-left:4px solid var(--rojo);
+    padding:20px 25px;
+    margin-top:30px;
+    background:rgba(139,32,37,.05);
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:var(--verde);
+    font-style:italic;
+}
+
+
+/* =========================
+   FINCA
+========================= */
+
+.finca{
+    background:var(--verde);
+    color:white;
+}
+
+.finca .section-title h2{
+    color:white;
+}
+
+.finca .section-title p{
+    color:#ccd5cf;
+}
+
+.finca-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+}
+
+.finca-img{
+    height:550px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.35)
+    ),
+    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfGVQhvLyQtSxi7qfF74RsgJUA5FpjqoYRuPhKKFsWDlx_ZTQ7ZAEhD9Ut5wg8RMM6YwwtjhOIJcDjkL6epeDv53fUNMQ7PQ_UBIlONu7MUBPq154RVQofhDZrL_SL-hiuRA6PGb8D25U/s320-rw/DSC_3918.jpg")
+    center/cover no-repeat;
+}
+
+.finca-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.finca-item{
+    padding:22px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.finca-item strong{
+    display:block;
+    color:#d9c69c;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+
+/* =========================
+   ENCASTES
+========================= */
+
+.encastes{
+    background:#eee8dc;
+}
+
+.encastes-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.encaste{
+    background:white;
+    padding:45px 30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.encaste:hover{
+    transform:translateY(-8px);
+}
+
+.encaste-number{
+    color:var(--rojo);
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+}
+
+.encaste h3{
+    color:var(--verde);
+    font-size:35px;
+    margin:10px 0;
+}
+
+.encaste p{
+    color:var(--gris);
+    font-size:14px;
+}
+
+
+/* =========================
+   DIVISA
+========================= */
+
+.divisa-section{
+    text-align:center;
+}
+
+.divisa{
+    width:190px;
+    height:190px;
+    margin:20px auto 35px;
+    border-radius:50%;
+
+    background:
+    conic-gradient(
+        var(--rojo) 0deg 180deg,
+        var(--verde) 180deg 360deg
+    );
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+    position:relative;
+}
+
+.divisa:after{
+    content:"⚓";
+
+    position:absolute;
+
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    background:var(--crema);
+    color:var(--verde);
+
+    left:57px;
+    top:57px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:40px;
+}
+
+.divisa-section h2{
+    font-size:58px;
+    color:var(--verde);
+}
+
+.divisa-section p{
+    color:var(--gris);
+    max-width:650px;
+    margin:auto;
+}
+
+
+/* =========================
+   TRAYECTORIA
+========================= */
+
+.timeline{
+    max-width:850px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:#c8bda9;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin-bottom:55px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content{
+    grid-column:1;
+    text-align:right;
+    padding-right:45px;
+}
+
+.timeline-item:nth-child(even) .timeline-content{
+    grid-column:2;
+    padding-left:45px;
+}
+
+.timeline-year{
+    color:var(--rojo);
+    font-family:'Cormorant Garamond',serif;
+    font-size:45px;
+    font-weight:bold;
+}
+
+.timeline-content h3{
+    font-size:30px;
+    color:var(--verde);
+}
+
+.timeline-content p{
+    color:var(--gris);
+    font-size:14px;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria{
+    background:var(--verde);
+}
+
+.galeria .section-title h2{
+    color:white;
+}
+
+.galeria .section-title p{
+    color:#ccd5cf;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-auto-rows:280px;
+    gap:12px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    background-size:cover;
+    background-position:center;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.gallery-item:hover{
+    transform:scale(.985);
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+}
+
+
+/* FOTOGRAFIAS REALES */
+
+.foto1{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVWDbx4si_dGhe-wOB6Rmu4nfwBnw5Uzv8_J9WWOp1fMCHOCXKgL0EnYiHDQFEH2MyO6iAqDwvBOCIArMRMSZCrmbbqsRvrCxRe05WaU2lYItxQ8yiq4JVq6AQHtdMAj809NHgk78eTFQ/s320-rw/DSC_3780.JPG");
+}
+
+.foto2{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwTenp3RWb_OpucIv7yve1lGOWg2U1LTRuquh_JaNRRtiZ0mU3wt2D0tMa1JaOzjBFYV06K-Ad8h-GJmeXXUeU2laZE_6NX97gSEC2vzm46Lz1fbo21h1dt_EUyyRm_WxdsaCdjtH40Qk/s320-rw/DSC_3858.jpg");
+}
+
+.foto3{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSbuIZQh7RvKCn5C8C228DsITU-JGXUDLMEPfFCgLWyFmCpYSJEbJDC46D_KMDvjuA8A0b02pzZfU4IqeN_HAXX64poigRTbCTDM_pRJ50WcJ9muViVb1NOfg0MwoSqMphR_Z0QgDczok/s320-rw/DSC_3915.jpg");
+}
+
+.foto4{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfGVQhvLyQtSxi7qfF74RsgJUA5FpjqoYRuPhKKFsWDlx_ZTQ7ZAEhD9Ut5wg8RMM6YwwtjhOIJcDjkL6epeDv53fUNMQ7PQ_UBIlONu7MUBPq154RVQofhDZrL_SL-hiuRA6PGb8D25U/s320-rw/DSC_3918.jpg");
+}
+
+.foto5{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTl4mUkSlVLDQxohgH7TULmUMgryvB7W9x1rfIIBe2gzqnYYmpyJQjeee7Ft4N6a7bx132SVCnfZjOfxile6Q-ZoZpQo0p2gcG-suwCPfNQG8ouvVDaDZ5yPuRkCIarJkh3NuJ9G0fOJ4/s320-rw/DSC_3974.jpg");
+}
+
+.foto6{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfJUV95El4Ba5XkKq_PfVMasw0LgbIP9s14eh06DrF23_oZkhCLGpRugT-2TPv5QRbbfAmTMMNvjBILslzeqDq15hFJd3i3mr_tOBCkTR5ZFx8IIz5bCjpj5tWaQVFktNCWV0qENQpTUw/s320-rw/DSC_3810.jpg");
+}
+
+.foto7{
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDCcnV8d_DM-mO91eScEue7bzonOyuG3vUviWAScbznDqoLppt82IQVRNWFvhFuLv8w7gAyI-mGDURlWSCuJmMTd4duVItLsY0h2N5KoRAAGoZa24jRMS7G45enASKZGHQdnkR5l9SXeE/s320-rw/DSC_3790.jpg");
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto{
+    background:#eee8dc;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.contact-info h2{
+    font-size:72px;
+    color:var(--verde);
+    line-height:.9;
+    margin-bottom:30px;
+}
+
+.contact-info p{
+    color:var(--gris);
+    margin-bottom:25px;
+}
+
+.contact-data{
+    margin-top:30px;
+}
+
+.contact-data div{
+    padding:16px 0;
+    border-bottom:1px solid #d4cbbb;
+}
+
+.contact-data strong{
+    display:block;
+    color:var(--verde);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.contact-data a{
+    color:var(--rojo);
+    font-weight:600;
+}
+
+.mapa{
+    min-height:450px;
+
+    background:
+    linear-gradient(
+        rgba(16,41,31,.55),
+        rgba(16,41,31,.55)
+    ),
+    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTl4mUkSlVLDQxohgH7TULmUMgryvB7W9x1rfIIBe2gzqnYYmpyJQjeee7Ft4N6a7bx132SVCnfZjOfxile6Q-ZoZpQo0p2gcG-suwCPfNQG8ouvVDaDZ5yPuRkCIarJkh3NuJ9G0fOJ4/s320-rw/DSC_3974.jpg")
+    center/cover;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+}
+
+.mapa-box h3{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#091a13;
+    color:white;
+    text-align:center;
+    padding:65px 20px 30px;
+}
+
+.footer-logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#9eaaa4;
+    font-size:13px;
+}
+
+.footer-line{
+    height:1px;
+    background:rgba(255,255,255,.1);
+    max-width:700px;
+    margin:35px auto 20px;
+}
+
+.copyright{
+    font-size:10px;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes entrada{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:.8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.94);
+    z-index:3000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:30px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    width:auto;
+    object-fit:contain;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    nav ul{
+        display:none;
+
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+
+        background:var(--verde);
+
+        flex-direction:column;
+
+        padding:25px;
+
+        text-align:center;
+
+        gap:20px;
+    }
+
+    nav ul.open{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .datos-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dato:nth-child(2){
+        border-right:0;
+    }
+
+    .historia-grid,
+    .finca-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .historia-img{
+        height:500px;
+    }
+
+    .encastes-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-item:first-child{
+        grid-row:span 1;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    .logo-text{
+        font-size:20px;
+    }
+
+    .logo-icon{
+        width:38px;
+        height:38px;
+    }
+
+    section{
+        padding:75px 6%;
+    }
+
+    .hero h1{
+        font-size:75px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .datos-grid{
+        grid-template-columns:1fr 1fr;
+        gap:20px 5px;
+    }
+
+    .dato{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.12);
+        padding-bottom:15px;
+    }
+
+    .dato strong{
+        font-size:35px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        grid-auto-rows:280px;
+    }
+
+    .timeline:before{
+        left:10px;
+    }
+
+    .timeline-item{
+        display:block;
+        padding-left:35px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content{
+        text-align:left;
+        padding:0;
+    }
+
+    .contact-info h2{
+        font-size:55px;
+    }
+
+    .finca-img{
+        height:400px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header id="header">
+
+<div class="nav">
+
+<a href="#inicio" class="logo">
+
+<div class="logo-icon">
+<span>⚓</span>
+</div>
+
+<div class="logo-text">
+EL ANCLA
+</div>
+
+</a>
+
+
+<nav>
+
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
+
+<ul id="menu">
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="#historia">Ganadería</a></li>
+
+<li><a href="#finca">La Finca</a></li>
+
+<li><a href="#encastes">Encaste</a></li>
+
+<li><a href="#trayectoria">Trayectoria</a></li>
+
+<li><a href="#galeria">Galería</a></li>
+
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="hero-subtitle">
+
+Zuera · Zaragoza · Aragón
+
+</div>
+
+<h1>
+
+El Ancla
+
+</h1>
+
+<p>
+
+Ganadería de reses bravas.
+Tradición, selección y pasión por el campo bravo aragonés.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#historia" class="btn btn-primary">
+
+Conocer la ganadería
+
+</a>
+
+<a href="#galeria" class="btn">
+
+Ver fotografías
+
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll">
+
+Descubrir
+
+</div>
+
+</section>
+
+
+
+<!-- DATOS -->
+
+<div class="datos">
+
+<div class="datos-grid">
+
+<div class="dato">
+
+<strong>2019</strong>
+
+<span>Fundación</span>
+
+</div>
+
+<div class="dato">
+
+<strong>120</strong>
+
+<span>Hectáreas</span>
+
+</div>
+
+<div class="dato">
+
+<strong>115+</strong>
+
+<span>Reses documentadas</span>
+
+</div>
+
+<div class="dato">
+
+<strong>3</strong>
+
+<span>Líneas de procedencia</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- HISTORIA -->
+
+<section id="historia">
+
+<div class="container">
+
+<div class="historia-grid">
+
+<div class="historia-img reveal"></div>
+
+<div class="historia-text reveal">
+
+<div class="section-title">
+
+<span class="section-label">
+Nuestra historia
+</span>
+
+<h2>
+Una ganadería nacida de una vocación
+</h2>
+
+</div>
+
+<p>
+
+La Ganadería El Ancla fue fundada en 2019 por
+Juan García Latas y Alejandro Ibáñez García,
+con el objetivo de desarrollar un proyecto
+ganadero propio en Aragón.
+
+</p>
+
+<p>
+
+Desde 2019 las reses pastan en la Finca
+San Antonio, en Zuera, donde se trabaja con
+criterios de selección orientados a obtener
+animales bravos y encastados.
+
+</p>
+
+<p>
+
+La ganadería mantiene diferentes líneas de
+procedencia y participa principalmente en
+festejos taurinos populares.
+
+</p>
+
+<div class="cita">
+
+"La selección y el trabajo diario en el campo
+son el camino para conservar la verdadera bravura."
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FINCA -->
+
+<section class="finca" id="finca">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="section-label">
+El campo bravo
+</span>
+
+<h2>
+Finca San Antonio
+</h2>
+
+<p>
+La casa de El Ancla se encuentra en Zuera,
+a orillas del río Gállego.
+</p>
+
+</div>
+
+<div class="finca-grid">
+
+<div class="finca-img reveal"></div>
+
+<div class="finca-info reveal">
+
+<div class="finca-item">
+
+<strong>Localización</strong>
+
+Zuera · Zaragoza · Aragón
+
+</div>
+
+<div class="finca-item">
+
+<strong>Superficie</strong>
+
+Aproximadamente 120 hectáreas.
+
+</div>
+
+<div class="finca-item">
+
+<strong>Entorno</strong>
+
+Pastos y tierras de labor situados junto
+al río Gállego.
+
+</div>
+
+<div class="finca-item">
+
+<strong>Instalaciones</strong>
+
+Corrales, almacén, cuadra, embarcadero,
+manga de saneamiento, cajón de curas y
+plaza de tientas.
+
+</div>
+
+<div class="finca-item">
+
+<strong>Selección</strong>
+
+Los animales se manejan en diferentes
+cercados según edad y características.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ENCASTES -->
+
+<section class="encastes" id="encastes">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="section-label">
+Origen y selección
+</span>
+
+<h2>
+Las líneas de El Ancla
+</h2>
+
+<p>
+La ganadería trabaja diferentes líneas
+de procedencia.
+</p>
+
+</div>
+
+<div class="encastes-grid">
+
+<article class="encaste reveal">
+
+<div class="encaste-number">
+01
+</div>
+
+<h3>
+Domecq
+</h3>
+
+<p>
+
+La base inicial incorporó reses de Gerardo
+Ortega y José Antonio Baigorri "El Pincha",
+de procedencia vinculada a Algarra,
+Marqués de Domecq y Juan Pedro Domecq.
+
+</p>
+
+</article>
+
+
+<article class="encaste reveal">
+
+<div class="encaste-number">
+02
+</div>
+
+<h3>
+Casta Navarra
+</h3>
+
+<p>
+
+En 2019 se incorporaron sementales de
+Faure y vacas de Domínguez para desarrollar
+una línea de Casta Navarra.
+
+</p>
+
+</article>
+
+
+<article class="encaste reveal">
+
+<div class="encaste-number">
+03
+</div>
+
+<h3>
+El Piteo
+</h3>
+
+<p>
+
+La ganadería también ha incorporado
+posteriormente reses procedentes de
+El Piteo.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- DIVISA -->
+
+<section class="divisa-section">
+
+<div class="container reveal">
+
+<span class="section-label">
+Identidad ganadera
+</span>
+
+<div class="divisa"></div>
+
+<h2>
+Divisa verde y roja
+</h2>
+
+<p>
+
+La divisa de Ganadería El Ancla está formada
+por los colores verde y rojo.
+
+El hierro representa un ancla.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- TRAYECTORIA -->
+
+<section id="trayectoria">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="section-label">
+Desde 2019
+</span>
+
+<h2>
+Trayectoria
+</h2>
+
+<p>
+Una joven ganadería aragonesa que continúa
+creciendo y participando en festejos.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-content">
+
+<div class="timeline-year">
+2019
+</div>
+
+<h3>
+Nace El Ancla
+</h3>
+
+<p>
+
+Juan García Latas y Alejandro Ibáñez García
+ponen en marcha el proyecto ganadero.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-content">
+
+<div class="timeline-year">
+2019
+</div>
+
+<h3>
+Primeros festejos
+</h3>
+
+<p>
+
+La ganadería comienza su trayectoria
+en festejos taurinos populares.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-content">
+
+<div class="timeline-year">
+2022
+</div>
+
+<h3>
+Festejos en Zuera
+</h3>
+
+<p>
+
+El Ancla participa en festejos taurinos
+de su localidad.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item reveal">
+
+<div class="timeline-content">
+
+<div class="timeline-year">
+2025
+</div>
+
+<h3>
+Feria del Pilar
+</h3>
+
+<p>
+
+El Ancla participa en las vaquillas
+de la Feria del Pilar de Zaragoza.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GALERIA -->
+
+<section class="galeria" id="galeria">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="section-label">
+Fotografía
+</span>
+
+<h2>
+El Ancla en imágenes
+</h2>
+
+<p>
+
+Fotografías reales de las reses y de
+la Finca San Antonio.
+
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item foto1"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVWDbx4si_dGhe-wOB6Rmu4nfwBnw5Uzv8_J9WWOp1fMCHOCXKgL0EnYiHDQFEH2MyO6iAqDwvBOCIArMRMSZCrmbbqsRvrCxRe05WaU2lYItxQ8yiq4JVq6AQHtdMAj809NHgk78eTFQ/s320-rw/DSC_3780.JPG">
+</div>
+
+
+<div class="gallery-item foto2"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwTenp3RWb_OpucIv7yve1lGOWg2U1LTRuquh_JaNRRtiZ0mU3wt2D0tMa1JaOzjBFYV06K-Ad8h-GJmeXXUeU2laZE_6NX97gSEC2vzm46Lz1fbo21h1dt_EUyyRm_WxdsaCdjtH40Qk/s320-rw/DSC_3858.jpg">
+</div>
+
+
+<div class="gallery-item foto3"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSbuIZQh7RvKCn5C8C228DsITU-JGXUDLMEPfFCgLWyFmCpYSJEbJDC46D_KMDvjuA8A0b02pzZfU4IqeN_HAXX64poigRTbCTDM_pRJ50WcJ9muViVb1NOfg0MwoSqMphR_Z0QgDczok/s320-rw/DSC_3915.jpg">
+</div>
+
+
+<div class="gallery-item foto4"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfGVQhvLyQtSxi7qfF74RsgJUA5FpjqoYRuPhKKFsWDlx_ZTQ7ZAEhD9Ut5wg8RMM6YwwtjhOIJcDjkL6epeDv53fUNMQ7PQ_UBIlONu7MUBPq154RVQofhDZrL_SL-hiuRA6PGb8D25U/s320-rw/DSC_3918.jpg">
+</div>
+
+
+<div class="gallery-item foto5"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTl4mUkSlVLDQxohgH7TULmUMgryvB7W9x1rfIIBe2gzqnYYmpyJQjeee7Ft4N6a7bx132SVCnfZjOfxile6Q-ZoZpQo0p2gcG-suwCPfNQG8ouvVDaDZ5yPuRkCIarJkh3NuJ9G0fOJ4/s320-rw/DSC_3974.jpg">
+</div>
+
+
+<div class="gallery-item foto6"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfJUV95El4Ba5XkKq_PfVMasw0LgbIP9s14eh06DrF23_oZkhCLGpRugT-2TPv5QRbbfAmTMMNvjBILslzeqDq15hFJd3i3mr_tOBCkTR5ZFx8IIz5bCjpj5tWaQVFktNCWV0qENQpTUw/s320-rw/DSC_3810.jpg">
+</div>
+
+
+<div class="gallery-item foto7"
+data-image="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDCcnV8d_DM-mO91eScEue7bzonOyuG3vUviWAScbznDqoLppt82IQVRNWFvhFuLv8w7gAyI-mGDURlWSCuJmMTd4duVItLsY0h2N5KoRAAGoZa24jRMS7G45enASKZGHQdnkR5l9SXeE/s320-rw/DSC_3790.jpg">
+</div>
+
+
+</div>
+
+
+<p style="
+color:#aeb9b3;
+text-align:center;
+font-size:11px;
+margin-top:25px;
+">
+
+Fotografías: Luis Barbero.
+Uso sujeto a autorización del autor.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+
+<div class="container">
+
+<div class="contact-grid">
+
+
+<div class="contact-info reveal">
+
+<span class="section-label">
+Ganadería El Ancla
+</span>
+
+<h2>
+Hablemos.
+</h2>
+
+<p>
+
+Para información sobre la ganadería,
+festejos, contratación o cualquier
+cuestión relacionada con El Ancla.
+
+</p>
+
+
+<div class="contact-data">
+
+
+<div>
+
+<strong>
+Finca
+</strong>
+
+San Antonio · Zuera · Zaragoza
+
+</div>
+
+
+<div>
+
+<strong>
+Teléfonos
+</strong>
+
+<a href="tel:+34628574335">
+628 57 43 35
+</a>
+
+<br>
+
+<a href="tel:+34617420093">
+617 42 00 93
+</a>
+
+</div>
+
+
+<div>
+
+<strong>
+Ganaderos
+</strong>
+
+Juan García Latas
+<br>
+Alejandro Ibáñez García
+
+</div>
+
+
+<div>
+
+<strong>
+Asociación
+</strong>
+
+Ganaderos de Lidia Unidos · GLU
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="mapa reveal">
+
+<div class="mapa-box">
+
+<h3>
+San Antonio
+</h3>
+
+<p>
+Zuera · Zaragoza
+</p>
+
+<br>
+
+<a
+class="btn btn-primary"
+href="https://www.google.com/maps/search/?api=1&query=Finca+San+Antonio+Zuera+Zaragoza"
+target="_blank">
+
+Ver ubicación
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+GANADERÍA EL ANCLA
+</div>
+
+<p>
+Finca San Antonio · Zuera · Zaragoza
+</p>
+
+<div class="footer-line"></div>
+
+<p class="copyright">
+
+© <span id="year"></span>
+Ganadería El Ancla · Todos los derechos reservados
+
+</p>
+
+</footer>
+
+
+
+<!-- VISOR DE FOTOS -->
+
+<div class="lightbox" id="lightbox">
+
+<div class="close-lightbox" id="closeLightbox">
+×
+</div>
+
+<img
+id="lightboxImage"
+src=""
+alt="Ganadería El Ancla">
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   CABECERA
+========================= */
+
+const header =
+document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY>50){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+
+/* =========================
+   MENU MOVIL
+========================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const menu =
+document.getElementById("menu");
+
+menuBtn.addEventListener("click",()=>{
+
+    menu.classList.toggle("open");
+
+});
+
+
+document.querySelectorAll("#menu a")
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        menu.classList.remove("open");
+
+    });
+
+});
+
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+const elementos =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+
+entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+},
+
+{
+threshold:.12
+}
+
+);
+
+
+elementos.forEach(elemento=>{
+
+    observer.observe(elemento);
+
+});
+
+
+
+/* =========================
+   AÑO AUTOMATICO
+========================= */
+
+document.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+
+
+/* =========================
+   GALERIA / LIGHTBOX
+========================= */
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+const closeLightbox =
+document.getElementById("closeLightbox");
+
+
+document.querySelectorAll(".gallery-item")
+.forEach(item=>{
+
+    item.addEventListener("click",()=>{
+
+        const image =
+        item.getAttribute("data-image");
+
+        lightboxImage.src=image;
+
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+
+closeLightbox.addEventListener("click",()=>{
+
+    lightbox.classList.remove("active");
+
+});
+
+
+lightbox.addEventListener("click",(event)=>{
+
+    if(event.target===lightbox){
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
+
+
+document.addEventListener("keydown",(event)=>{
+
+    if(event.key==="Escape"){
+
+        lightbox.classList.remove("active");
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>
